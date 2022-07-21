@@ -2,20 +2,20 @@ const mysql = require("mysql");
 const nodemailer = require("nodemailer");
 const fs = require('fs');
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  database: 'kiosk',
-  user: 'root',
-  password: ''
-});
-
 // const db = mysql.createConnection({
-//     host: 'localhost',
-//     database: 'sample_kiosk',
-//     user: 'sample_kiosk',
-//     port: 3306,
-//     password: 'password1010@'
+//   host: 'localhost',
+//   database: 'kiosk',
+//   user: 'root',
+//   password: ''
 // });
+
+const db = mysql.createConnection({
+    host: 'localhost',
+    database: 'sample_kiosk',
+    user: 'doadmin',
+    port: 3306,
+    password: 'AVNS_OVLR3V3VHsxDLKq2fez'
+});
 
 
 const transporter = nodemailer.createTransport({

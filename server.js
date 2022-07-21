@@ -1,20 +1,20 @@
 const mysql = require('mysql');
 let timer = null;
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  database: 'kiosk',
-  user: 'root',
-  password: ''
-});
-
 // const db = mysql.createConnection({
 //   host: 'localhost',
-//   database: 'sample_kiosk',
-//   user: 'sample_kiosk',
-//   port: 3306,
-//   password: 'password1010@'
+//   database: 'kiosk',
+//   user: 'root',
+//   password: ''
 // });
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  database: 'sample_kiosk',
+  user: 'doadmin',
+  port: 3306,
+  password: 'AVNS_OVLR3V3VHsxDLKq2fez'
+});
 
 var timerStart = function() {
   clearInterval(timer);
