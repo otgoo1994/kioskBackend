@@ -1,0 +1,41 @@
+const router = require('express').Router();
+const { catchErrors } = require('../handlers/errorHandler');
+const userController  = require('../controllers/user');
+const auth = require('../middlewares/authall');
+// const payment = require('../middlewares/auth');
+
+// route
+router.post("/login",catchErrors(userController.login));
+router.post("/get-all-kiosk", auth, catchErrors(userController.getAllKiosk));
+router.post("/new-kiosk-info", auth, catchErrors(userController.getNewKioskInfo));
+router.post("/add-new-city", auth, catchErrors(userController.addNewCity));
+router.post("/add-new-district", auth, catchErrors(userController.addNewDistrict));
+router.post("/add-new-kiosk", auth, catchErrors(userController.addNewKiosk));
+router.post("/delete-kiosk", auth, catchErrors(userController.deleteKiosk));
+router.post("/photo-upload", auth, catchErrors(userController.photoUpload));
+router.post("/video-upload", auth, catchErrors(userController.videoUpload));
+router.post("/get-photos", auth, catchErrors(userController.getPhotos));
+router.post("/get-videos", auth, catchErrors(userController.getVideos));
+router.post("/update-photo-active", auth, catchErrors(userController.updatePhotoActive));
+router.post("/update-video-active", auth, catchErrors(userController.updateVidoActive));
+router.post("/delete-photo", auth, catchErrors(userController.deletePhoto));
+router.post("/delete-video", auth, catchErrors(userController.deleteVideo));
+router.post("/update-kiosk-photo", auth, catchErrors(userController.updatePhotoKiosk));
+router.post("/add-kiosk-video", auth, catchErrors(userController.addVideoToKiosk));
+router.post("/add-kiosk-photo", auth, catchErrors(userController.addphototokiosk));
+router.post("/get-users", auth, catchErrors(userController.getUsers));
+router.post("/delete-user", auth, catchErrors(userController.deleteUser));  
+router.post("/add-new-user", auth, catchErrors(userController.addNewUser));
+router.post("/get-marquee", auth, catchErrors(userController.getTexts));
+router.post("/add-marquee", auth, catchErrors(userController.addText));
+router.post("/delete-marquee", auth, catchErrors(userController.deleteText));
+router.post("/add-kiosk-text", auth, catchErrors(userController.addTextToKiosk));
+router.post("/update-end-at", auth, catchErrors(userController.updateEndAt));
+router.post("/update-video-end-at", auth, catchErrors(userController.updateVideoEndAt));
+router.post("/update-marquee-end-at", auth, catchErrors(userController.updateMarqueeEndAt));
+router.post("/remove-photo-from-kiosk", auth, catchErrors(userController.removePhotoFromKiosk));
+router.post("/remove-video-from-kiosk", auth, catchErrors(userController.removeVideoFromKiosk));
+router.post("/remove-text-from-kiosk", auth, catchErrors(userController.removeTextFromKiosk));
+router.post("/change-runtime", auth, catchErrors(userController.changeRuntime));
+
+module.exports = router;
