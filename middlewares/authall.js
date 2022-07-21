@@ -12,7 +12,7 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
   host: 'localhost',
   database: 'sample_kiosk',
-  user: 'doadmin',
+  user: 'root',
   port: 3306,
   password: 'AVNS_OVLR3V3VHsxDLKq2fez'
 });
