@@ -14,9 +14,8 @@ const db = mysql.createConnection({
     database: 'sample_kiosk',
     user: 'root',
     port: 3306,
-    password: 'AVNS_OVLR3V3VHsxDLKq2fez'
-});
-
+    password: 'password1010@'
+  });
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.mail.mn',

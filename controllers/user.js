@@ -8,13 +8,12 @@ const fs = require('fs');
 //   user: 'root',
 //   password: ''
 // });
-
 const db = mysql.createConnection({
   host: 'localhost',
   database: 'sample_kiosk',
   user: 'root',
   port: 3306,
-  password: 'AVNS_OVLR3V3VHsxDLKq2fez'
+  password: 'password1010@'
 });
 
 
