@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/user", require("./routes/user"));
 app.use("/kiosk", require("./routes/kiosk"));
 
+app.use("/gazar/admin", require("./routes/gazar/admin"));
+app.use("/gazar/props", require("./routes/gazar/props"));
+app.use("/gazar/user", require("./routes/gazar/user"));
+
 app.use(express.static('public'))
 
 //Setup Error Handlers

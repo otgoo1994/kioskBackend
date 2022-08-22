@@ -2,20 +2,20 @@ const jwt = require("jwt-then");
 const mysql = require("mysql");
 
 
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   database: 'kiosk',
-//   user: 'root',
-//   password: ''
-// });
-
 const db = mysql.createConnection({
   host: 'localhost',
-  database: 'sample_kiosk',
+  database: 'kiosk',
   user: 'root',
-  port: 3306,
-  password: 'password1010@'
+  password: ''
 });
+
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   database: 'sample_kiosk',
+//   user: 'root',
+//   port: 3306,
+//   password: 'password1010@'
+// });
 
 module.exports = async (req, res, next) => {
   try {    

@@ -1,5 +1,4 @@
 const mysql = require("mysql");
-const nodemailer = require("nodemailer");
 const fs = require('fs');
 
 // const db = mysql.createConnection({
@@ -16,16 +15,6 @@ const db = mysql.createConnection({
     port: 3306,
     password: 'password1010@'
   });
-
-const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.mn',
-  port: 465,
-  secure: true,
-  auth: {
-    user: 'sales@icbc.mn',
-    pass: 'Sales@75117733'
-  }
-});
 
 const sha256 = require("js-sha256");
 const jwt = require('jwt-then');
