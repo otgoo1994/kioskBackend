@@ -2,20 +2,24 @@ const mysql = require('mysql');
 let timer = null;
 const fs = require('fs');
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  database: 'kiosk',
-  user: 'root',
-  password: ''
-});
-
 // const db = mysql.createConnection({
 //   host: 'localhost',
-//   database: 'sample_kiosk',
+//   database: 'kiosk',
 //   user: 'root',
-//   port: 3306,
-//   password: 'password1010@'
+//   password: ''
 // });
+
+const db = mysql.createConnection({
+  host: 'db-mysql-sgp1-66799-do-user-11118497-0.b.db.ondigitalocean.com',
+  database: 'kiosk',
+  user: 'testadmin',
+  port: 25060,
+  ssl: {
+    //ca: fs.readFileSync("./public/contents/ca-certificate.crt"),
+    ca: fs.readFileSync("./public/contents/ca-certificate.crt"),
+  },
+  password: 'AVNS_FvgreVmM7HlicMArR2V'
+});
 
 var timerStart = function() {
   clearInterval(timer);

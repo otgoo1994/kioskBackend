@@ -1,20 +1,24 @@
 const mysql = require("mysql");
 const fs = require('fs');
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  database: 'kiosk',
-  user: 'root',
-  password: ''
-});
-
 // const db = mysql.createConnection({
-//     host: 'localhost',
-//     database: 'sample_kiosk',
-//     user: 'root',
-//     port: 3306,
-//     password: 'password1010@'
-//   });
+//   host: 'localhost',
+//   database: 'kiosk',
+//   user: 'root',
+//   password: ''
+// });
+
+const db = mysql.createConnection({
+    host: 'db-mysql-sgp1-66799-do-user-11118497-0.b.db.ondigitalocean.com',
+    database: 'kiosk',
+    user: 'testadmin',
+    port: 25060,
+    ssl: {
+      //ca: fs.readFileSync("./public/contents/ca-certificate.crt"),
+      ca: fs.readFileSync("./public/contents/ca-certificate.crt"),
+    },
+    password: 'AVNS_FvgreVmM7HlicMArR2V'
+  });
 
 const sha256 = require("js-sha256");
 const jwt = require('jwt-then');
