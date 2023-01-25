@@ -12,7 +12,7 @@ import axios from 'axios';
 import YoutubeIframe from '@techassi/vue-youtube-iframe';
 import Vue3SimpleHtml2pdf from "vue3-simple-html2pdf";
 
-axios.defaults.baseURL = 'https://api.kiosk.gazar.mn/gazar';
+axios.defaults.baseURL = 'https://api.gazar.mn/gazar';
 // axios.defaults.baseURL = 'http://localhost:8010/gazar';
 const token = localStorage.getItem('token');
 
@@ -28,6 +28,6 @@ app.use(VuePlyr);
 app.use(Vue3SimpleHtml2pdf);
 app.use(YoutubeIframe);
 app.config.globalProperties.$axios = axios;
-app.config.globalProperties.$appUrl = 'https://api.kiosk.gazar.mn/gazar';
+app.config.globalProperties.$appUrl = 'https://api.gazar.mn/gazar';
 // app.config.globalProperties.$appUrl = 'http://localhost:8010/gazar';
 app.mount('#app')
